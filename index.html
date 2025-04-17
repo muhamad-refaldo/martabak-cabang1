@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARTABAK</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .space-grotesk {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold space-grotesk bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    REFALDO GROUP
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+                    <a href="#menu" class="hover:text-purple-400 transition-colors">Menu</a>
+                    <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                    <a href="#cabang-dua" class="hover:text-purple-400 transition-colors">Cabang Dua</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4">
+                <a href="#home" class="block py-2 hover:text-purple-400">Home</a>
+                <a href="#menu" class="block py-2 hover:text-purple-400">Menu</a>
+                <a href="#about" class="block py-2 hover:text-purple-400">About</a>
+                <a href="#cabang-dua" class="block py-2 hover:text-purple-400">Cabang Dua</a>
+                <a href="#contact" class="block py-2 hover:text-purple-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative" style="background-image: url(img/martabak1.jpg); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative text-center px-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold space-grotesk mb-6">
+                EXPERIENCE THE MARTABAK THAT<br>SHAKE <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">YOUR TONGUE</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">Where tradition meets innovation</p>
+            <a href="#menu" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-opacity">
+                Explore Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold space-grotesk text-center mb-16">
+                Our Signature <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Menu</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                    <img src="/img/martabak2.jpg" alt="Classic Martabak" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Martabak manis</h3>
+                        <p class="text-gray-400 mb-4">Traditional recipe with a modern twist</p>
+                        <span class="text-purple-400 font-semibold">RP 25.000</span>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                    <img src="/img/dorayaki1.jpg" alt="Fusion Delight" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">DORAYAKI</h3>
+                        <p class="text-gray-400 mb-4">East meets West in perfect harmony</p>
+                        <span class="text-purple-400 font-semibold">RP 1.000</span>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform duration-300">
+                    <img src="/img/roti bakar.jpg" alt="Sweet Symphony" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ROTI BAKAR</h3>
+                        <p class="text-gray-400 mb-4">Dessert perfection redefined</p>
+                        <span class="text-purple-400 font-semibold">RP 20.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold space-grotesk mb-6">
+                        TENTANG <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent"> SAYA</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6">
+                        usaha ini berdiri pada tahun 2023, dan pada awalnya hanya menunggu sambil dapet kerjaan yang tetap akan tetapi ini menjadi usaha tetap saya dan semoga bisa terus berkembang
+                    </p>
+                    <p class="text-gray-300">
+                        dan saya berharap usaha ini bisa menjadi usaha yang besar dan bisa membantu orang lain untuk mendapatkan pekerjaan 
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="/img/poto aldo.jpg" alt="Our Kitchen" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabang Dua Section -->
+    <section id="cabang-dua" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold space-grotesk text-center mb-16">
+                Cabang <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Dua</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 space-grotesk">Informasi Cabang</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-user text-purple-400"></i>
+                            <p class="text-gray-300">Pengelola: Rizal and Rivan</p>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-whatsapp text-purple-400"></i>
+                            <a href="https://wa.me/+6283194853529" target="_blank" 
+                               class="text-purple-400 hover:text-purple-300 transition-colors">
+                                +62 831-9485-3529
+                            </a>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-purple-400 mt-1"></i>
+                            <p class="text-gray-300">
+                                Jl. Lipi Baru<br>
+                                Kelurahan Pakansari, Kecamatan Cibinong<br>
+                                Kab bogor, 16915
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="#menu-cabang-dua" class="inline-block mt-8 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-opacity">
+                        Explore Cabang Dua
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <img src="/img/IMG-20250417-WA0024 (1).jpg" 
+                         alt="Cabang Dua Store" 
+                         class="rounded-xl shadow-2xl w-full h-[580px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-30 rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold space-grotesk text-center mb-16">
+                Berikan<span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent"> Masukan</span>
+            </h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold space-grotesk bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent mb-6 md:mb-0">
+                    MUHAMAD REFALDO
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/refaldo.squarspant/?locale=id_ID" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mhmdrfldo22/" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Location Map -->
+            <div class="mt-12 mb-8">
+                <h3 class="text-2xl font-bold space-grotesk text-center mb-8">
+                    LO<span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">KASI</span>
+                </h3>
+                <div class="w-full h-[400px] rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d495.53172037345854!2d106.84354717960717!3d-6.489517009050969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1744878125613!5m2!1sid!2sid"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="true"
+                        loading="lazy" 
+                        class="w-full h-full">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; 2023 MUHAMAD REFALDO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
